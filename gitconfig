@@ -1,0 +1,11 @@
+[user]
+	email = foo@bar.com
+	name = Rolf Pfeffertal
+[alias]
+[alias]
+[alias]
+[alias]
+[alias]
+[alias]
+[alias]
+	gud = !git commit -m \"$(commitmsg)\"

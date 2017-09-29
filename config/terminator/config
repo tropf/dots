@@ -1,0 +1,23 @@
+[global_config]
+  focus = system
+[keybindings]
+  full_screen = <Ctrl><Shift>F11
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002240"
+    cursor_color = "#aaaaaa"
+    font = Inconsolata for Powerline Medium 12
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    use_system_font = False
+  [[Neues Profil]]
+    use_system_font = False
