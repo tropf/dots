@@ -22,7 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-markdown'
 
 " cobalt2 color scheme
-Plugin 'GertjanReynaert/cobalt2-vim-theme'
+Plugin 'tropf/cobalt2-vim-customized'
 
 " mark greek questionmarks
 Plugin 'sterereo/semicolon-rescue'
