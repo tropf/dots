@@ -8,7 +8,6 @@ use IO::File;
 use autodie; # die if problem reading or writing a file
 use Cwd 'abs_path';
 use File::Basename;
-use File::HomeDir;
 use JSON::PP;
 
 use Getopt::Std;
@@ -34,7 +33,7 @@ sub load_text {
     return join '', load_lines(@_);
 }
 
-my $homedir = File::HomeDir->my_home;
+my $homedir = $ENV{"HOME"};
 my $dirname = abs_path(dirname(__FILE__));
 
 my $conf_filename = $dirname . "/conf.json";
