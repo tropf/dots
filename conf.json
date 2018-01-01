@@ -1,0 +1,14 @@
+[
+    {
+        "target": ".zshrc",
+        "rc": "zshrc",
+        "inc": "zshrc.inc",
+        "comment": "zshrc.comment"
+    },
+    {
+        "target": ".vimrc",
+        "rc": "vimrc",
+        "inc": "vimrc.inc",
+        "comment": "vimrc.comment"
+    }
+]
