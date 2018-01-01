@@ -1,1 +1,2 @@
-echo "nothing";
+vim +PluginInstall +qall
+vim +PluginUpdate +qall
