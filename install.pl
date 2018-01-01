@@ -44,10 +44,70 @@ for $conf_entry (@conf) {
     my $rc_actual_filename = $homedir . "/" . $current_conf{"target"};
     my $comment_filename = $dirname . "/" . $current_conf{"comment"};
 
-    print $template_filename . "\n";
-    print $rc_included_filename . "\n";
-    print $rc_actual_filename . "\n";
-    print $comment_filename . "\n";
+    print "Checking files for $current_conf{target}\n";
+    my $files_ok = 1;
+
+    print "  " . $template_filename . "...";
+    if (-e $template_filename ) {
+        if (-r $template_filename) {
+            print "OK\n";
+        } else {
+            print "NOT READABLE\n";
+            $files_ok = 0;
+        }
+    } else {
+        print "MISSING\n";
+        $files_ok = 0;
+    }
+
+    print "  " . $rc_included_filename . "...";
+    if (-e $rc_included_filename ) {
+        if (-r $rc_included_filename) {
+            print "OK\n";
+        } else {
+            print "NOT READABLE\n";
+            $files_ok = 0;
+        }
+    } else {
+        print "MISSING\n";
+        $files_ok = 0;
+    }
+
+    print "  " . $rc_actual_filename . "...";
+    if (-e $rc_actual_filename) {
+        if (-r $rc_actual_filename) {
+            if (-w $rc_actual_filename) {
+                print "OK\n";
+            } else {
+                print "NOT WRITEABLE\n";
+                $files_ok = 0;
+            }
+        } else {
+            print "NOT READABLE\n";
+            $files_ok = 0;
+        }
+    } else {
+        print "MISSING\n";
+        $files_ok = 0;
+    }
+
+    print "  " . $comment_filename . "...";
+    if (-e $comment_filename) {
+        if (-r $comment_filename) {
+            print "OK\n";
+        } else {
+            print "NOT READABLE\n";
+            $files_ok = 0;
+        }
+    } else {
+        print "MISSING\n";
+        $files_ok = 0;
+    }
+
+    if (! $files_ok) {
+        print "  >>> file errors, skipping\n";
+        next;
+    }
 
     # load comment template
     my $comment_fh = IO::File->new();
