@@ -2,10 +2,9 @@
 	email = foo@bar.com
 	name = Rolf Pfeffertal
 [alias]
-[alias]
-[alias]
-[alias]
-[alias]
-[alias]
-[alias]
 	gud = !git commit -m \"$(commitmsg)\"
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short

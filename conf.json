@@ -10,5 +10,11 @@
         "rc": "vimrc",
         "inc": "vimrc.inc",
         "comment": "vimrc.comment"
+    },
+    {
+        "target": ".gitconfig",
+        "rc": "gitconfig",
+        "inc": "gitconfig.inc",
+        "comment": "gitconfig.comment"
     }
 ]
