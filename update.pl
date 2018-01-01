@@ -11,6 +11,12 @@ use File::Basename;
 use File::HomeDir;
 use JSON::PP;
 
+use Getopt::Std;
+
+# option r: remove comments
+my %opts;
+getopts("r", \%opts);
+
 sub load_lines {
     my $argc = @_;
     if (1 != $argc) {
@@ -161,17 +167,35 @@ for $conf_entry (@conf) {
     # put new include script on top of .rc
     my $rc_new = join '', @rc_new_lines;
 
-    # kill (eventually) trailing \n
+    # kill (possibly) trailing \n
     $inc_text =~ s/\R$//;
     $inc_text .= "\n";
     $inc_text = $comment_include_block_start . $inc_text . $comment_include_block_end;
 
     $rc_new =~ s/\R$//;
-    $rc_new = $inc_text . $rc_new . "\n";
+    $rc_new = $rc_new . "\n";
+
+    if (!$opts{r}) {
+        print "  injecting include script\n";
+        $rc_new = $inc_text . $rc_new;
+    } else {
+        print "  removing include block\n";
+    }
 
     # .rc write back
     my $rc_wb_fh = IO::File->new();
     $rc_wb_fh->open("> $rc_actual_filename") or die("No writerino to .zshrc file");
     print $rc_wb_fh $rc_new;
     $rc_wb_fh->close;
+
+    # execute update script
+    if (exists $current_conf{"update"}) {
+        my $update_script = $dirname . "/" . $current_conf{"update"};
+        if (-e $update_script && -x $update_script) {
+            print "  running $update_script\n";
+            system("sh", $update_script);
+        } else {
+            print "  couldn't run update script $update_script\n";
+        }
+    }
 }
