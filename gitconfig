@@ -1,5 +1,5 @@
 [user]
-	email = foo@bar.com
+	email = tropf@users.noreply.github.com
 	name = Rolf Pfeffertal
 [alias]
 	gud = !git commit -m \"$(commitmsg)\"
