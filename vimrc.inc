@@ -1,1 +1,1 @@
-" elelelelelelelel $FILE"
+source $FILE
