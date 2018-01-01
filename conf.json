@@ -3,7 +3,8 @@
         "target": ".zshrc",
         "rc": "zshrc",
         "inc": "zshrc.inc",
-        "comment": "zshrc.comment"
+        "comment": "zshrc.comment",
+        "setup": "zshrc.setup.sh"
     },
     {
         "target": ".vimrc",
