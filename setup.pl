@@ -51,3 +51,6 @@ for $conf_entry (@conf) {
         print "  no setup script, skipping\n";
     }
 }
+
+# run update script
+system("perl", "$dirname/update.pl");

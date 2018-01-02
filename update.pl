@@ -176,7 +176,7 @@ for $conf_entry (@conf) {
 
     if (!$opts{r}) {
         print "  injecting include script\n";
-        $rc_new = $inc_text . $rc_new;
+        $rc_new = $rc_new . $inc_text;
     } else {
         print "  removing include block\n";
     }
