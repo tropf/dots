@@ -19,5 +19,11 @@
         "rc": "gitconfig",
         "inc": "gitconfig.inc",
         "comment": "gitconfig.comment"
+    },
+    {
+        "target": ".tmux.conf",
+        "rc": "tmux.conf",
+        "inc": "tmux.conf.inc",
+        "comment": "tmux.conf.comment"
     }
 ]
