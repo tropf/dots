@@ -1,7 +1,8 @@
 plugins=(git zsh-syntax-highlighting)
+ZSH_THEME="ys"
 source $ZSH/oh-my-zsh.sh
 
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 # less funky manpages
 export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
