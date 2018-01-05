@@ -92,8 +92,7 @@ for $conf_entry (@conf) {
             $files_ok = 0;
         }
     } else {
-        print "MISSING\n";
-        $files_ok = 0;
+        print "CREATING\n";
     }
 
     print "  " . $comment_filename . "...";
