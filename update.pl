@@ -79,6 +79,7 @@ for $conf_entry (@conf) {
     }
 
     print "  " . $rc_actual_filename . "...";
+    system("touch", $rc_actual_filename);
     if (-e $rc_actual_filename) {
         if (-r $rc_actual_filename) {
             if (-w $rc_actual_filename) {
@@ -92,7 +93,8 @@ for $conf_entry (@conf) {
             $files_ok = 0;
         }
     } else {
-        print "CREATING\n";
+        print "MISSING\n";
+        $files_ok = 0;
     }
 
     print "  " . $comment_filename . "...";

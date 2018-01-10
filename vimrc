@@ -44,6 +44,9 @@ Plugin 'mattn/emmet-vim'
 " html close tags
 Plugin 'alvan/vim-closetag'
 
+" .md preview
+Plugin 'joedicastro/vim-markdown-extra-preview'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
