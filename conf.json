@@ -25,5 +25,10 @@
         "rc": "tmux.conf",
         "inc": "tmux.conf.inc",
         "comment": "tmux.conf.comment"
+    },
+    {
+        "_note": "Simple Terminal, ST is recompiled on change of its config, so it is basically reinstalled, hence the same script",
+        "setup": "st/setup.sh",
+        "update": "st/setup.sh"
     }
 ]
