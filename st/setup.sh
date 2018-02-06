@@ -48,3 +48,5 @@ echo "Continuing installation...";
 
 echo "need password to install...";
 sudo make install
+
+echo "you can now set st as the standard terminal emulator";
