@@ -156,3 +156,7 @@ set smartcase
 
 " relative linenumbers
 set relativenumber
+
+" allow YCM for markdown and similar files.
+let g:ycm_filetype_blacklist = {}
+
