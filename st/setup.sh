@@ -6,7 +6,7 @@ echo "# Downloading source & patches #";
 echo "################################";
 
 echo "cleaning up old files...";
-xargs rm -r < .gitignore
+xargs rm -rf < .gitignore
 
 wget https://dl.suckless.org/st/st-0.7.tar.gz;
 wget https://st.suckless.org/patches/clipboard/st-clipboard-0.7.diff
