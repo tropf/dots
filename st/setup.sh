@@ -31,10 +31,10 @@ make config.h
 patch -i ../mine.patch
 
 echo "installing terminfo locally...";
-tic -s st-0.7/st.info
+tic -s st.info
 
 echo "installing terminfo globally... (you can abort this step)";
-sudo tic -s st-0.7/st.info
+sudo tic -s st.info
 
 echo "##########################################";
 echo "# Simple Terminal - Step 2               #";
