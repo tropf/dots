@@ -1,3 +1,5 @@
+cd "$(dirname "$0")"
+
 echo "################################";
 echo "# Simple Terminal - Step 1     #";
 echo "# Installing Terminfo files    #";
