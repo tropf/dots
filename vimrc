@@ -50,6 +50,12 @@ Plugin 'joedicastro/vim-markdown-extra-preview'
 " general beautifier
 Plugin 'Chiel92/vim-autoformat'
 
+" show file tree
+Plugin 'scrooloose/nerdtree'
+
+" show git status in file tree
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -163,3 +169,5 @@ set relativenumber
 " allow YCM for markdown and similar files.
 let g:ycm_filetype_blacklist = {}
 
+" NERDTree on the right
+let g:NERDTreeWinPos = "right"  
