@@ -23,6 +23,12 @@ Plugin 'vim-airline/vim-airline-themes'
 " vim Markdown support
 Plugin 'tpope/vim-markdown'
 
+" tables in markdown
+Plugin 'dhruvasagar/vim-table-mode'
+
+" pretty aligned tables
+Plugin 'godlygeek/tabular'
+
 " cobalt2 color scheme
 Plugin 'tropf/cobalt2-vim-customized'
 
@@ -55,6 +61,9 @@ Plugin 'scrooloose/nerdtree'
 
 " show git status in file tree
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" show git changes in file
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
