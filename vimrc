@@ -20,14 +20,14 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" vim Markdown support
-Plugin 'tpope/vim-markdown'
-
-" tables in markdown
-Plugin 'dhruvasagar/vim-table-mode'
-
 " pretty aligned tables
 Plugin 'godlygeek/tabular'
+
+" vim Markdown support (also customized syntax highlighting)
+Plugin 'tpope/vim-markdown'
+
+" pretty tables (not markdown)
+Plugin 'dhruvasagar/vim-table-mode'
 
 " cobalt2 color scheme
 Plugin 'tropf/cobalt2-vim-customized'
