@@ -65,12 +65,18 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " show git changes in file
 Plugin 'airblade/vim-gitgutter'
 
+" extended latex support
+Plugin 'vim-latex/vim-latex'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+" all lower case search term => case insensitive, else case sensitive
+set smartcase
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -81,7 +87,9 @@ endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
+set showmode		" display current mode
 set incsearch		" do incremental searching
+set wildmenu        " show available commands in command mode
 
 map Q gq
 
@@ -148,7 +156,7 @@ endif
 packadd matchit
 
 set expandtab
-set tabstop=4
+set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set autoindent
@@ -168,9 +176,6 @@ set nu
 
 " /// comments for Doxygen
 let g:DoxygenToolkit_commentType = "C++"
-
-" all lower case search term => case insensitive, else case sensitive
-set smartcase
 
 " relative linenumbers
 set relativenumber
