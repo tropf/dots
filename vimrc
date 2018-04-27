@@ -76,6 +76,7 @@ filetype plugin indent on    " required
 set backspace=indent,eol,start
 
 " all lower case search term => case insensitive, else case sensitive
+set ignorecase
 set smartcase
 
 if has("vms")
