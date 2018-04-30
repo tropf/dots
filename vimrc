@@ -68,6 +68,9 @@ Plugin 'airblade/vim-gitgutter'
 " extended latex support
 Plugin 'vim-latex/vim-latex'
 
+" german spell checking
+Plugin 'yowidin/vim-german-spell'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
