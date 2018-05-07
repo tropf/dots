@@ -1,11 +1,7 @@
 import os
-import json
+from conf import conf
 
 dirname = os.path.dirname(os.path.realpath(__file__))
-
-conf_filename = dirname + '/conf.json'
-with open(conf_filename, 'r') as infile:
-    conf = json.loads(infile.read())
 
 for conf_entry in conf:
     if 'target' in conf_entry:
