@@ -20,6 +20,6 @@ for conf_entry in conf:
         if os.path.isfile(setup_script_file) and os.access(setup_script_file, os.X_OK):
             os.system(setup_script_file)
     else:
-        print ('  no setup script, skipping')
+        print('  no setup script, skipping')
 
 import update
