@@ -71,6 +71,9 @@ Plugin 'vim-latex/vim-latex'
 " german spell checking
 Plugin 'yowidin/vim-german-spell'
 
+" generate c++ source files from header files
+Plugin 'vim-scripts/h2cppx'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -189,3 +192,10 @@ let g:ycm_filetype_blacklist = {}
 
 " NERDTree on the right
 let g:NERDTreeWinPos = "right"  
+
+" .cc as file extension for c++ source files
+let g:h2cppx_postfix = 'cc'
+" point h2cppx to python2
+let g:h2cppx_python_path = '/usr/bin/python2'
+
+
