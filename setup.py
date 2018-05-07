@@ -11,7 +11,7 @@ for conf_entry in conf:
     if 'target' in conf_entry:
         print('=== {} ==='.format(conf_entry['target']))
     else:
-        print('=== {} ==='.format('target missing')
+        print('=== {} ==='.format('target missing'))
 
     if 'setup' in conf_entry:
         setup_script_file = dirname + '/' + conf_entry['setup']
