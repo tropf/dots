@@ -12,7 +12,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+if has("python")
+    " YouCompleteMe only works when python is enabled
+    Plugin 'Valloric/YouCompleteMe'
+endif
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
