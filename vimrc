@@ -14,7 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 if has("python") || has("python3")
     " YouCompleteMe only works when python is enabled
-    Plugin 'Valloric/YouCompleteMe'
+    if executable("cmake")
+        " requires cmake
+        Plugin 'Valloric/YouCompleteMe'
+    endif
 endif
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
