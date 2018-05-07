@@ -74,6 +74,9 @@ Plugin 'yowidin/vim-german-spell'
 " generate c++ source files from header files
 Plugin 'vim-scripts/h2cppx'
 
+" lint inline
+Plugin 'w0rp/ale'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
