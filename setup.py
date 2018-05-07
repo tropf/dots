@@ -5,13 +5,13 @@ dirname = os.path.dirname(os.path.realpath(__file__))
 
 for conf_entry in conf:
     if 'target' in conf_entry:
-        print('=== {} ==='.format(conf_entry['target']))
+        print('=== ' + conf_entry['target'] + ' ===')
     else:
-        print('=== {} ==='.format('target missing'))
+        print('=== target missing ===')
 
     if 'setup' in conf_entry:
         setup_script_file = dirname + '/' + conf_entry['setup']
-        print('  running setup script {}'.format(setup_script_file))
+        print('  running setup script ' + setup_script_file)
 
         if os.path.isfile(setup_script_file) and os.access(setup_script_file, os.X_OK):
             os.system(setup_script_file)

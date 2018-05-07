@@ -8,9 +8,9 @@ homedir = os.path.expanduser("~")
 
 for conf_entry in conf:
     if 'target' in conf_entry:
-        print('=== {} ==='.format(conf_entry['target']))
+        print('=== ' + conf_entry['target'] + ' ===')
     else:
-        print('=== {} ==='.format('target missing'))
+        print('=== target missing ===')
 
     try:
         rc_included_filename = dirname + '/' + conf_entry['rc']
@@ -53,7 +53,7 @@ for conf_entry in conf:
         # writeback
         with open(rc_actual_filename, 'w') as rcfile:
             for line in newlines:
-                rcfile.write('{}\n'.format(line))
+                rcfile.write(line + '\n')
 
     except Exception as e:
         print('something bad happened, will continue')
