@@ -17,7 +17,6 @@ for conf_entry in conf:
         rc_actual_filename = homedir + '/' + conf_entry['target']
         with open(dirname + '/' + conf_entry['comment']) as commentfile:
             comment_template = commentfile.read().strip()
-            comment_template += '\n'
 
         comment_begin = comment_template.replace('$COMMENT', '***** BEGIN INCLUDE BLOCK *****')
         comment_end = comment_template.replace('$COMMENT', '***** END INCLUDE BLOCK *****')
