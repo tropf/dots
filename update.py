@@ -59,11 +59,14 @@ for conf_entry in conf:
             for line in newlines:
                 rcfile.write('{}\n'.format(line))
 
+    except Exception as e:
+        print('something bad happened, will continue')
+
+    try:
         # run update script
         if 'update' in conf_entry:
             update_script = dirname + '/' + conf_entry['update']
             print('  running update script')
             os.system(update_script)
-
     except Exception as e:
-        print('something bad happened, will continue')
+        print('  was not able to execute update script')
