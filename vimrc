@@ -41,6 +41,9 @@ Plugin 'tropf/cobalt2-vim-customized'
 " mark greek questionmarks
 Plugin 'sterereo/semicolon-rescue'
 
+" better bracket matching
+Plugin 'tmhedberg/matchit'
+
 " auto close brakctes
 Plugin 'jiangmiao/auto-pairs'
 
@@ -165,13 +168,6 @@ if has('langmap') && exists('+langnoremap')
   " compatible).
   set langnoremap
 endif
-
-
-" Add optional packages.
-"
-" The matchit plugin makes the % command work better, but it is not backwards
-" compatible.
-packadd matchit
 
 set expandtab
 set tabstop=8
