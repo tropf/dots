@@ -50,8 +50,10 @@ Plugin 'mattn/emmet-vim'
 " html close tags
 Plugin 'alvan/vim-closetag'
 
-" .md preview
-Plugin 'joedicastro/vim-markdown-extra-preview'
+if has("python")
+    " .md preview, requires python
+    Plugin 'joedicastro/vim-markdown-extra-preview'
+endif
 
 " general beautifier
 Plugin 'Chiel92/vim-autoformat'
