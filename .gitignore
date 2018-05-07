@@ -20,3 +20,6 @@ build/
 
 # crashlogs
 *.crash
+
+# pycache
+__pycache__/
