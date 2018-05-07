@@ -12,11 +12,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-if has("python") || has("python3")
+" check minimum version
+if v:version > 705 || (v:version == 704 && has('patch1578'))
     " YouCompleteMe only works when python is enabled
-    if executable("cmake")
+    if has("python") || has("python3")
         " requires cmake
-        Plugin 'Valloric/YouCompleteMe'
+        if executable("cmake")
+            Plugin 'Valloric/YouCompleteMe'
+        endif
     endif
 endif
 " The following are examples of different formats supported.
