@@ -33,25 +33,26 @@ for conf_entry in conf:
         newlines = []
         keep_copying = True
 
-        with open(rc_actual_filename, 'r') as rcfile:
-            for line in rcfile:
-                line = line.strip()
-                if line == comment_begin:
-                    keep_copying = False
+        if (os.path.isfile(rc_actual_filename)):
+            with open(rc_actual_filename, 'r') as rcfile:
+                for line in rcfile:
+                    line = line.strip()
+                    if line == comment_begin:
+                        keep_copying = False
 
-                if keep_copying:
-                    newlines.append(line)
+                    if keep_copying:
+                        newlines.append(line)
 
-                if line == comment_end:
-                    keep_copying = True
+                    if line == comment_end:
+                        keep_copying = True
 
-            if len(sys.argv) >= 2 and '-r' == sys.argv[1]:
-                print('  removing include block')
-            else:
-                print('  injecting include block')
-                newlines.append(comment_begin)
-                newlines.append(inc_line)
-                newlines.append(comment_end)
+        if len(sys.argv) >= 2 and '-r' == sys.argv[1]:
+            print('  removing include block')
+        else:
+            print('  injecting include block')
+            newlines.append(comment_begin)
+            newlines.append(inc_line)
+            newlines.append(comment_end)
 
         # writeback
         with open(rc_actual_filename, 'w') as rcfile:
