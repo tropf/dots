@@ -12,7 +12,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-if has("python")
+if has("python") || has("python3")
     " YouCompleteMe only works when python is enabled
     Plugin 'Valloric/YouCompleteMe'
 endif
@@ -28,9 +28,6 @@ Plugin 'godlygeek/tabular'
 
 " vim Markdown support (also customized syntax highlighting)
 Plugin 'tpope/vim-markdown'
-
-" pretty tables (not markdown)
-Plugin 'dhruvasagar/vim-table-mode'
 
 " cobalt2 color scheme
 Plugin 'tropf/cobalt2-vim-customized'
