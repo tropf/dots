@@ -195,7 +195,7 @@ set relativenumber
 let g:ycm_filetype_blacklist = {}
 
 " NERDTree on the right
-let g:NERDTreeWinPos = "right"  
+let g:NERDTreeWinPos = "right"
 
 " .cc as file extension for c++ source files
 let g:h2cppx_postfix = 'cc'
@@ -204,4 +204,18 @@ let g:h2cppx_python_path = '/usr/bin/python2'
 
 " jk to exit insert mode
 imap jk <Esc>
+
+" hightlight trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+" CPP SYNTAX CHECKKER
+" let g:syntastic_cpp_clang_exec = '/usr/bin/clang'
+let g:syntastic_cpp_checkers = ['clang', 'gcc' ]
+" let g:syntastic_cpp_compiler = 'gcc'
+let g:ycm_show_diagnostics_ui = 0
+" AND ALSO CHECK HEADER FILES
+let g:syntastic_cpp_check_header = 1
+" CPP AUTO COMPLETION
+let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
