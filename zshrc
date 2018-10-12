@@ -5,6 +5,9 @@ source $ZSH/oh-my-zsh.sh
 
 #export TERM="xterm-256color"
 
+# this is vim country!
+export EDITOR=vim
+
 # less funky manpages
 export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
