@@ -85,6 +85,9 @@ Plugin 'yowidin/vim-german-spell'
 " generate c++ source files from header files
 Plugin 'vim-scripts/h2cppx'
 
+" draw ascii art diagrams
+Plugin 'vim-scripts/DrawIt'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -219,3 +222,10 @@ let g:syntastic_cpp_check_header = 1
 " CPP AUTO COMPLETION
 let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+" call to remove trailing whitespaces
+function TrimWhiteSpace()
+    %s/\s*$//
+    ''
+endfunction
+
+command TrimWhiteSpace call TrimWhiteSpace()
