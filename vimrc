@@ -229,3 +229,20 @@ function TrimWhiteSpace()
 endfunction
 
 command TrimWhiteSpace call TrimWhiteSpace()
+
+" draw it: make key binds available as commands
+command DIstart normal \di
+command DIstop normal \ds
+
+let g:di_is_on = 0
+function DItoggle()
+    if g:di_is_on
+        DIstop
+        let g:di_is_on = 0
+    else
+        DIstart
+        let g:di_is_on = 1
+    endif
+endfunction
+
+command DI call DItoggle()
